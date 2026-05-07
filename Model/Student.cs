@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NPIC_TEST.Model
 {
-    internal class Student
+    public class Student
     {
         private int id;
         private string username;
