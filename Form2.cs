@@ -94,16 +94,33 @@ namespace NPIC_TEST
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(button2.Text == "Edit")
+            {
+                if (dataGridView1.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Must select a row");
+                    return;
+                }
+                getID();
+                return;
+            }
+
             Student student = list.FirstOrDefault(s => s.Id.ToString() == txtID.Text);
             if (student != null)
             {
                 student.Username = txtUsername.Text;
                 student.Phone = txtPhone.Text;
                 refreshDataGridView();
+                button2.Text = "Edit";
+                button1.Enabled = true;
             }
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            getID();
+        }
+        private Student getID()
         {
             var result = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             Student selectStudent = list.FirstOrDefault(s => s.Id.ToString() == result);
@@ -111,7 +128,8 @@ namespace NPIC_TEST
             txtUsername.Text = selectStudent.Username;
             txtPhone.Text = selectStudent.Phone;
             button2.Text = "Update";
-
+            button1.Enabled = false;
+            return selectStudent;
         }
     }
 }
