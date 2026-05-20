@@ -101,7 +101,7 @@ namespace NPIC_TEST
                     MessageBox.Show("Must select a row");
                     return;
                 }
-                getID();
+                selectStudent();
                 return;
             }
 
@@ -118,9 +118,9 @@ namespace NPIC_TEST
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            getID();
+            selectStudent();
         }
-        private Student getID()
+        private void selectStudent()
         {
             var result = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             Student selectStudent = list.FirstOrDefault(s => s.Id.ToString() == result);
@@ -129,7 +129,6 @@ namespace NPIC_TEST
             txtPhone.Text = selectStudent.Phone;
             button2.Text = "Update";
             button1.Enabled = false;
-            return selectStudent;
         }
     }
 }
