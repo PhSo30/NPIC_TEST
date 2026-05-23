@@ -22,3 +22,5 @@ D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TES
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.pdb
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.Form3.resources
 D:\CS 19(NPIC)\Third Year\2nd semester\Desktop App\NPIC_TEST\NPIC_TEST\obj\Debug\NPIC_TEST.Form3.resources
+D:\CS 19(NPIC)\Third Year\2nd semester\Desktop App\NPIC_TEST\NPIC_TEST\obj\Debug\NPIC_TEST.views.registerForm.resources
+D:\CS 19(NPIC)\Third Year\2nd semester\Desktop App\NPIC_TEST\NPIC_TEST\obj\Debug\NPIC_TEST.views.loginForm.resources
