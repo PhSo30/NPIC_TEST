@@ -1,7 +1,9 @@
-﻿using System;
+﻿using NPIC_TEST.NPIC_TESTDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +19,25 @@ namespace NPIC_TEST.views
         {
             InitializeComponent();
         }
-        string name = "admin";
-        string password = "admin";
+
+        bool validation()
+        {
+            UsersTableAdapter dataset = new UsersTableAdapter();
+            using (DataTable dt = dataset.GetData())
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (txtUsername.Text == dr["username"].ToString() &&
+                        txtPassword.Text == dr["password"].ToString() &&
+                        !Convert.ToBoolean(dr["disable"]))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsername.Text))
@@ -34,7 +53,7 @@ namespace NPIC_TEST.views
                 txtPassword.Focus();
                 return;
             }
-            if(txtUsername.Text == name && txtPassword.Text == password)
+            if(validation())
             {
                 MessageBox.Show("YEAH!");
                 
@@ -44,6 +63,7 @@ namespace NPIC_TEST.views
                 MessageBox.Show("Please try again!");
                 
             }
+
 
         }
     }

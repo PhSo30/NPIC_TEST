@@ -1047,7 +1047,7 @@ namespace NPIC_TEST.NPIC_TESTDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Users] ([nickname], [username], [password], [email], [phone], [disable], [picture]) VALUES (@nickname, @username, @password, @email, @phone, @disable, @picture);
-SELECT id, nickname, username, password, email, phone, disable, picture FROM Users WHERE (id = SCOPE_IDENTITY())";
+SELECT id, nickname, username, password, email, phone, disable, picture FROM users WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nickname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1059,7 +1059,7 @@ SELECT id, nickname, username, password, email, phone, disable, picture FROM Use
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [nickname] = @nickname, [username] = @username, [password] = @password, [email] = @email, [phone] = @phone, [disable] = @disable, [picture] = @picture WHERE (([id] = @Original_id) AND ((@IsNull_nickname = 1 AND [nickname] IS NULL) OR ([nickname] = @Original_nickname)) AND ((@IsNull_username = 1 AND [username] IS NULL) OR ([username] = @Original_username)) AND ((@IsNull_password = 1 AND [password] IS NULL) OR ([password] = @Original_password)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_phone = 1 AND [phone] IS NULL) OR ([phone] = @Original_phone)) AND ((@IsNull_disable = 1 AND [disable] IS NULL) OR ([disable] = @Original_disable)));
-SELECT id, nickname, username, password, email, phone, disable, picture FROM Users WHERE (id = @id)";
+SELECT id, nickname, username, password, email, phone, disable, picture FROM users WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nickname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
