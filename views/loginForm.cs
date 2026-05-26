@@ -20,7 +20,7 @@ namespace NPIC_TEST.views
             InitializeComponent();
         }
 
-        bool validation()
+        bool authen()
         {
             UsersTableAdapter dataset = new UsersTableAdapter();
             using (DataTable dt = dataset.GetData())
@@ -53,7 +53,7 @@ namespace NPIC_TEST.views
                 txtPassword.Focus();
                 return;
             }
-            if(validation())
+            if(authen())
             {
                 MessageBox.Show("YEAH!");
                 
