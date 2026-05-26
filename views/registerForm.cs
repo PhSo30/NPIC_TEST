@@ -16,5 +16,13 @@ namespace NPIC_TEST.views
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form login = new loginForm();
+            login.Show();
+            
+        }
     }
 }

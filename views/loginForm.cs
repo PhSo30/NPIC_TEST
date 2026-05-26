@@ -19,20 +19,17 @@ namespace NPIC_TEST.views
         {
             InitializeComponent();
         }
-
+        
         bool authen()
         {
-            UsersTableAdapter dataset = new UsersTableAdapter();
-            using (DataTable dt = dataset.GetData())
+            UsersTableAdapter adapter = new UsersTableAdapter();
+            using (DataTable dt = adapter.GetDataByUname(txtUsername.Text.Trim()))
             {
-                foreach (DataRow dr in dt.Rows)
+                DataRow dataRow = dt.Rows[0];
+                if (dataRow["Password"].ToString() == txtPassword.Text.Trim() &&
+                    !Convert.ToBoolean(dataRow["disable"]))
                 {
-                    if (txtUsername.Text == dr["username"].ToString() &&
-                        txtPassword.Text == dr["password"].ToString() &&
-                        !Convert.ToBoolean(dr["disable"]))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
 
@@ -65,6 +62,14 @@ namespace NPIC_TEST.views
             }
 
 
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form registerForm = new registerForm();
+            registerForm.Show();
+            
         }
     }
 }
