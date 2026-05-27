@@ -24,7 +24,9 @@ namespace NPIC_TEST.views
         {
             InitializeComponent();
         }
-        
+
+        // @TODO: Refactor this method to use Dapper instead of DataTable for better performance and cleaner code.
+
         //bool authen()
         //{
         //    UsersTableAdapter adapter = new UsersTableAdapter();
@@ -51,8 +53,6 @@ namespace NPIC_TEST.views
                     {
                         return true;
                     }
-
-
                 }
             } return false;
             
