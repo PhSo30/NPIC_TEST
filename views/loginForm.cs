@@ -2,13 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+
+
 
 namespace NPIC_TEST.views
 {
@@ -20,20 +25,37 @@ namespace NPIC_TEST.views
             InitializeComponent();
         }
         
+        //bool authen()
+        //{
+        //    UsersTableAdapter adapter = new UsersTableAdapter();
+        //    using (DataTable dt = adapter.GetDataByUname(txtUsername.Text.Trim()))
+        //    {
+        //        DataRow dataRow = dt.Rows[0];
+        //        if (dataRow["Password"].ToString() == txtPassword.Text.Trim() &&
+        //            !Convert.ToBoolean(dataRow["disable"]))
+        //        {
+        //            return true;
+        //        }
+        //    }
+
+        //    return false;
+        //}
         bool authen()
         {
-            UsersTableAdapter adapter = new UsersTableAdapter();
-            using (DataTable dt = adapter.GetDataByUname(txtUsername.Text.Trim()))
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["NPIC_TEST.Properties.Settings.NPIC_TESTConnectionString"].ConnectionString))
             {
-                DataRow dataRow = dt.Rows[0];
-                if (dataRow["Password"].ToString() == txtPassword.Text.Trim() &&
-                    !Convert.ToBoolean(dataRow["disable"]))
+                var user = conn.QuerySingleOrDefault("SELECT * FROM Users WHERE Username = @Username", new { Username = txtUsername.Text.Trim() });
+                if (user != null)
                 {
-                    return true;
-                }
-            }
+                    if (user.password == txtPassword.Text.Trim() && !user.disable)
+                    {
+                        return true;
+                    }
 
-            return false;
+
+                }
+            } return false;
+            
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {

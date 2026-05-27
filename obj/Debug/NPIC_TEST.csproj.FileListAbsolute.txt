@@ -26,3 +26,12 @@ D:\CS 19(NPIC)\Third Year\2nd semester\Desktop App\NPIC_TEST\NPIC_TEST\obj\Debug
 D:\CS 19(NPIC)\Third Year\2nd semester\Desktop App\NPIC_TEST\NPIC_TEST\obj\Debug\NPIC_TEST.views.loginForm.resources
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.views.loginForm.resources
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.views.registerForm.resources
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\Dapper.dll
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\Dapper.xml
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.csproj.Up2Date
