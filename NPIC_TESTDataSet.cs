@@ -10,9 +10,12 @@
     }
 }
 
-namespace NPIC_TEST.NPIC_TESTDataSetTableAdapters {
-    
-    
+namespace NPIC_TEST.NPIC_TESTDataSetTableAdapters
+{
+    partial class AdministrativeBoundariesTableAdapter
+    {
+    }
+
     public partial class UsersTableAdapter {
     }
 }

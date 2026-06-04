@@ -35,3 +35,5 @@ D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\Microsof
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.csproj.Up2Date
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.views.Dashboard.resources
+D:\CS 19(NPIC)\Third Year 2nd Semester\DesktopAppC#\NPIC_TEST\obj\Debug\NPIC_TEST.views.Dashboard2.resources

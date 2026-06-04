@@ -16,7 +16,7 @@ namespace NPIC_TEST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new views.loginForm());
+            Application.Run(new views.Dashboard());
         }
     }
 }
