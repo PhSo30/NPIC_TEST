@@ -67,16 +67,17 @@ namespace NPIC_TEST.views
 
             switch (level)
             {
-                case 1: level1 = " || "+titleText; break;
-                case 2: level2 = " || "+titleText; break;
-                case 3: level3 = " || " +titleText; break;
-                case 4: level4 = " || " +titleText; break;
+                case 1: level1 = " ["+titleText+"]"; break;
+                case 2: level2 = " ["+titleText+"]"; break;
+                case 3: level3 = " ["+titleText+"]"; break;
+                case 4: level4 = " ["+titleText+"]"; break;
 
             }
             
             if (displayTitle == "TitleKH")
             {
-                textBox2.Text = "រាជធានី/ខេត្ត" + level1 + ", ស្រុក/ខណ្ឌ" + level2 + ", ឃុំ/សង្កាត់" + level3 + ", ភូមិ" + level4;
+                textBox2.Text = "រាជធានី/ខេត្ត" + level1 + " |  ស្រុក/ខណ្ឌ" + level2 + " |  ឃុំ/សង្កាត់" + level3 + " |  ភូមិ" + level4;
+                
             }
             if (displayTitle == "TitleEN")
             {
@@ -142,6 +143,20 @@ namespace NPIC_TEST.views
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             changeTitle("TitleEN");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(textBox2.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+            comboBox4.SelectedIndex = -1;
+            textBox2.Clear();
         }
     }
 }
