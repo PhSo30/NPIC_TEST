@@ -30,10 +30,20 @@ namespace NPIC_TEST.views
         {
             displayTitle = title;
 
+            int indexComboOne = comboBox1.SelectedIndex;
+            int indexComboTwo = comboBox2.SelectedIndex;
+            int indexComboThree = comboBox3.SelectedIndex;
+            int indexComboFour = comboBox4.SelectedIndex;
+
             comboBox1.DisplayMember = displayTitle;
             comboBox2.DisplayMember = displayTitle;
             comboBox3.DisplayMember = displayTitle;
             comboBox4.DisplayMember = displayTitle;
+
+            comboBox1.SelectedIndex = indexComboOne;
+            comboBox2.SelectedIndex = indexComboTwo;
+            comboBox3.SelectedIndex = indexComboThree;
+            comboBox4.SelectedIndex = indexComboFour;
 
             displayTitleInTextBox(1, comboBox1);
             displayTitleInTextBox(2, comboBox2);
@@ -107,21 +117,21 @@ namespace NPIC_TEST.views
         {
 
             dataSourceFunction(comboBox1, comboBox2);
-            displayTitleInTextBox(1, comboBox2);
+            displayTitleInTextBox(1, comboBox1);
 
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataSourceFunction(comboBox2, comboBox3);
-            displayTitleInTextBox(2, comboBox3);
+            displayTitleInTextBox(2, comboBox2);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             dataSourceFunction(comboBox3, comboBox4);
-            displayTitleInTextBox(3, comboBox4);
+            displayTitleInTextBox(3, comboBox3);
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
