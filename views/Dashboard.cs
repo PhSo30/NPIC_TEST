@@ -98,8 +98,6 @@ namespace NPIC_TEST.views
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
-
             comboBox1.DataSource = this.administrativeBoundariesTableAdapter.GetDataByCode(null);
             if(comboBox1.DataSource != null )
             {
@@ -108,9 +106,6 @@ namespace NPIC_TEST.views
                 
             }
             radioButton1.Checked = true;
-            
-            
-           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
