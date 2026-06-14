@@ -42,20 +42,29 @@ namespace NPIC_TEST.views
 
         //    return false;
         //}
+        //bool authen()
+        //{
+        //    using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["NPIC_TEST.Properties.Settings.NPIC_TESTConnectionString"].ConnectionString))
+        //    {
+        //        var user = conn.QuerySingleOrDefault("SELECT * FROM Users WHERE Username = @Username", new { Username = txtUsername.Text.Trim() });
+        //        if (user != null)
+        //        {
+        //            if (user.password == txtPassword.Text.Trim() && !user.disable)
+        //            {
+        //                return true;
+        //            }
+        //        }
+        //    } return false;
+            
+        //}
         bool authen()
         {
-            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["NPIC_TEST.Properties.Settings.NPIC_TESTConnectionString"].ConnectionString))
+            this.usersBindingSource.Filter = "username = '" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "' AND disable = false";
+            if(usersBindingSource.Count > 0 )
             {
-                var user = conn.QuerySingleOrDefault("SELECT * FROM Users WHERE Username = @Username", new { Username = txtUsername.Text.Trim() });
-                if (user != null)
-                {
-                    if (user.password == txtPassword.Text.Trim() && !user.disable)
-                    {
-                        return true;
-                    }
-                }
-            } return false;
-            
+                return true;
+            }
+            return false;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -92,6 +101,21 @@ namespace NPIC_TEST.views
             Form registerForm = new registerForm();
             registerForm.Show();
             
+        }
+
+        private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nPIC_TESTDataSet);
+
+        }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'nPIC_TESTDataSet.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.nPIC_TESTDataSet.Users);
+
         }
     }
 }
